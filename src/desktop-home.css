@@ -1,0 +1,73 @@
+/* The approved home composition shares one scale on fine-pointer desktops.
+   Do not intercept browser zoom or change mobile/collection/detail layouts. */
+html.desktop-home-fit #game-root {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  transform: none;
+  background: var(--paper);
+}
+html.desktop-home-fit #app {
+  position: absolute;
+  left: var(--home-left, 0px);
+  top: var(--home-top, 0px);
+  width: 1440px;
+  height: 810px;
+  min-height: 0;
+  transform: scale(var(--home-scale, 1));
+  transform-origin: top left;
+}
+html.desktop-home-fit .rotate { display: none; }
+html.desktop-home-fit #app .demo-shell {
+  width: 1440px;
+  height: 810px;
+  min-height: 0;
+}
+html.desktop-home-fit #app .side-nav {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  width: 76px;
+  padding: 7px;
+  gap: 8px;
+}
+html.desktop-home-fit #app .side-nav button { min-height: 68px; padding: 8px 4px; gap: 4px; font-size: 14px; letter-spacing: 2px; }
+html.desktop-home-fit #app .side-nav button b { font-size: 25px; }
+html.desktop-home-fit #app .hero-copy { left: 156px; top: 82px; width: 340px; }
+html.desktop-home-fit #app .hero-copy .eyebrow { font-size: 12px; letter-spacing: 3px; margin-bottom: 22px; }
+html.desktop-home-fit #app .hero-copy h1 { font-size: 76px; line-height: 1.25; letter-spacing: 15px; margin-bottom: 10px; }
+html.desktop-home-fit #app .hero-copy h1 span { padding-left: 45px; }
+html.desktop-home-fit #app .hero-title { align-items: flex-start; }
+html.desktop-home-fit #app .hero-title .daily-gift { width: calc(100% - 45px); min-height: 44px; margin: 0 0 18px 45px; padding: 10px 14px; font-size: 16px; }
+html.desktop-home-fit #app .hero-copy .poem { font-size: 19px; line-height: 1.8; letter-spacing: 2px; margin: 0 0 24px; }
+html.desktop-home-fit #app .hero-copy .intro { display: block; font-size: 13px; line-height: 1.8; margin: 0; }
+html.desktop-home-fit #app .hero-carousel { left: 736px; right: auto; top: 345px; bottom: auto; width: 600px; height: 620px; transform: translate(-50%, -50%); }
+html.desktop-home-fit #app .carousel-dots { padding: 8px 0 4px; gap: 9px; }
+html.desktop-home-fit #app .dot-button { padding: 7px; }
+html.desktop-home-fit #app .home-wallet { top: 16px; right: 22px; max-width: none; padding: 6px 10px; }
+html.desktop-home-fit #app .wallet-item { min-height: 32px; padding: 5px 8px; gap: 6px; }
+html.desktop-home-fit #app .wallet-item small { font-size: 12px; }
+html.desktop-home-fit #app .wallet-item strong { font-size: 22px; }
+html.desktop-home-fit #app .identity-dock { top: auto; right: 22px; bottom: 180px; width: 350px; height: auto; aspect-ratio: 8 / 7; padding: 16px 18px; row-gap: 8px; }
+html.desktop-home-fit #app .featured { gap: 12px; }
+html.desktop-home-fit #app .featured h2 { font-size: 30px; letter-spacing: 3px; margin: 4px 0 0; }
+html.desktop-home-fit #app .featured small { font-size: 11px; }
+html.desktop-home-fit #app .red-seal { font-size: 27px; padding: 4px 8px; }
+html.desktop-home-fit #app .identity-copy { font-size: 13px; line-height: 1.8; margin: 0; }
+html.desktop-home-fit #app .identity-dock .hero-choices { gap: 9px; margin: 0; }
+html.desktop-home-fit #app .identity-dock .hero-choices img { width: 43px; height: 50px; }
+html.desktop-home-fit #app .identity-dock .hero-choices span { display: block; font-size: 11px; }
+html.desktop-home-fit #app .identity-dock .collection-link { min-height: 36px; padding: 8px; font-size: 13px; margin: 0; }
+html.desktop-home-fit #app .featured .home-ring { --ring-size: 72px; }
+html.desktop-home-fit #app .home-ring .progress-ring-label { top: 14px; left: 14px; font-size: 9px; }
+html.desktop-home-fit #app .home-ring strong { top: 35px; font-size: 11px; }
+html.desktop-home-fit #app .draw-dock { left: 50%; right: auto; bottom: 12px; width: 850px; transform: translateX(-50%); display: block; }
+html.desktop-home-fit #app .draw-dock .pull-area { min-width: 0; width: 100%; padding: 14px 22px; }
+html.desktop-home-fit #app .pull-area .pity { height: 20px; margin-bottom: 8px; font-size: 13px; }
+html.desktop-home-fit #app .draw-dock .pull-buttons { display: flex; justify-content: center; gap: 32px; }
+html.desktop-home-fit #app .draw-dock .pull-buttons button { flex: 1 1 0; min-width: 0; min-height: 56px; padding: 12px 22px; font-size: 24px; }
+html.desktop-home-fit #app .draw-dock .pull-buttons button small { display: inline; font-size: 12px; margin-left: 6px; }
+html.desktop-home-fit #app .draw-dock .hint { margin-top: 8px; font-size: 12px; line-height: 1.4; }

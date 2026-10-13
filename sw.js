@@ -1,9 +1,9 @@
 /* Scoped resource cache only. Saves remain in localStorage and are never touched. */
-const VERSION='20261004-r10';
+const VERSION='20261013-r11';
 const BASE=new URL('./',self.location.href);
 const CACHE='rigui-resources:'+BASE.pathname+':'+VERSION;
 // Only compatible unchanged assets migrate; programs always use this release.
-const PREVIOUS_ASSETS=['20261004-r9','20261003-r8','20261003-r7'].map(version=>'rigui-resources:'+BASE.pathname+':'+version);
+const PREVIOUS_ASSETS=['20261004-r10','20261004-r9','20261003-r8','20261003-r7'].map(version=>'rigui-resources:'+BASE.pathname+':'+version);
 const pendingResources=new Map();
 self.addEventListener('install',event=>event.waitUntil(self.skipWaiting()));
 self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));

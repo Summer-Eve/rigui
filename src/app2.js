@@ -1,12 +1,12 @@
-import {CARDS,CARD_BY_ID,CHARACTERS} from './data.js?v=20261004-r10';
-import {newSave,draw,progress,claimDaily,localDay,exchange,validateSave} from './engine.js?v=20261004-r10';
-import {loadSave,persist} from './storage.js?v=20261004-r10';
-import {GameAudio} from './audio.js?v=20261004-r10';
-import {pityCopy,starsMarkup,collectionPercent,drawArt,firstMeetingMarkup,drawSummary,collectionFilterButton,collectionFilterMarkup,collectionFilterChoices} from './presentation.js?v=20261004-r10';
-import {watchResultImages,watchCollectionImages} from './result-images.js?v=20261004-r10';
-import {fitResultCards} from './presentation.js?v=20261004-r10';
-import {exchangeSuccessMarkup,watchExchangeImage,showExchangeError} from './exchange-feedback.js?v=20261004-r10';
-import {installPageScroll} from './page-scroll.js?v=20261004-r10';
+import {CARDS,CARD_BY_ID,CHARACTERS} from './data.js?v=20261013-r11';
+import {newSave,draw,progress,claimDaily,localDay,exchange,validateSave} from './engine.js?v=20261013-r11';
+import {loadSave,persist} from './storage.js?v=20261013-r11';
+import {GameAudio} from './audio.js?v=20261013-r11';
+import {pityCopy,starsMarkup,collectionPercent,drawArt,firstMeetingMarkup,drawSummary,collectionFilterButton,collectionFilterMarkup,collectionFilterChoices} from './presentation.js?v=20261013-r11';
+import {watchResultImages,watchCollectionImages} from './result-images.js?v=20261013-r11';
+import {fitResultCards} from './presentation.js?v=20261013-r11';
+import {exchangeSuccessMarkup,watchExchangeImage,showExchangeError} from './exchange-feedback.js?v=20261013-r11';
+import {installPageScroll} from './page-scroll.js?v=20261013-r11';
 const app=document.querySelector('#app'),modal=document.querySelector('#modal'),toast=document.querySelector('#toast'),rotatePrompt=document.querySelector('.rotate'),rotateCountdown=document.querySelector('.rotate-countdown');let state=loadSave().save||newSave(),index=0,view='home',timer,toastTimer,rotateTimer,rotateTick,drawRevealTimer,drawRevealSkip,skipRevealClick=false,openCurrency=null,openProgress=false,filter={rarity:'all',role:'all',owned:'all'};
 const reviewParams=new URLSearchParams(location.search),localReview=['localhost','127.0.0.1'].includes(location.hostname)||reviewParams.get('review')==='1';if(localReview){state.tickets=Math.max(state.tickets,9999);persist(state);}
 const ssr=CARDS.filter(c=>c.rarity==='SSR');

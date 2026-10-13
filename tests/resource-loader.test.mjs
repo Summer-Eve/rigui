@@ -148,6 +148,17 @@ test('current release reuses r9 artwork but fetches versioned code freshly',asyn
  assert.equal(await(await worker.fetch('assets/card.webp')).text(),'r9 art');
  assert.equal(await(await worker.fetch('src/app2.js?v='+RESOURCE_VERSION)).text(),'fresh code');assert.equal(worker.requests.length,1);
 });
+test('current release reuses r10 artwork without migrating old program responses',async()=>{
+ const cache=fakeCache(),old=fakeCache();await old.put(base+'assets/card.webp',new Response('r10 art'));
+ await old.put(base+'src/desktop-home.js?v='+RESOURCE_VERSION,new Response('stale code'));
+ const worker=workerHarness(cache,old,async()=>new Response('fresh desktop code'),'20261004-r10');
+ assert.equal(await(await worker.fetch('assets/card.webp')).text(),'r10 art');
+ assert.equal(await(await worker.fetch('src/desktop-home.js?v='+RESOURCE_VERSION)).text(),'fresh desktop code');
+ assert.equal(worker.requests.length,1);
+ const startup=readFileSync(new URL('../src/startup.js',import.meta.url),'utf8');
+ assert.match(startup, /\['20261004-r10','20261004-r9'/);
+});
+
 test('optional downloads use normal HTTP cache and low priority while critical code stays normal',async()=>{
  const seen=[];
  await loadResources([{url:'./assets/a.webp'},{url:'./src/app2.js',required:true}],{base,fetcher:async(url,options)=>{seen.push(options);return new Response('ok');}});
