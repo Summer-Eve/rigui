@@ -8,6 +8,12 @@
 
 黄菊 SummerEve｜游戏 AI 产品 / AI 应用 / AI 工具链。14 页，约 8.28 MB，包含日晷游戏、Playwright MCP 数据分析、多 agent 验证与实习 AIGC 作品。
 
+## 游戏策划作品
+
+[《遗迹回响》3D 动作 RPG 成长系统策划案](https://summer-eve.github.io/rigui/portfolio/Ruins-Echo-Growth-System-Design.pdf) · [仓库内文件](portfolio/Ruins-Echo-Growth-System-Design.pdf)
+
+两页成长系统设计方案，涵盖核心循环、角色升级与突破、资源产出消耗、成长节奏示例估算及 Demo 范围规划。
+
 ## 日晷 · 一卷山河
 
 免费古代线抽卡与图鉴小游戏，水墨二次元角色样卡试玩版。
