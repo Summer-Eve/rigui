@@ -6,7 +6,7 @@
 
 [查看 / 下载最终版 PDF](https://summer-eve.github.io/rigui/portfolio/Huang-Ju-AI-Portfolio.pdf) · [仓库内文件](portfolio/Huang-Ju-AI-Portfolio.pdf)
 
-黄菊 SummerEve｜游戏 AI 产品 / AI 应用 / AI 工具链。14 页，约 8.28 MB，包含日晷游戏、Playwright MCP 数据分析、多 agent 验证与实习 AIGC 作品。
+黄菊 SummerEve｜游戏 AI 产品 / AI 应用 / 游戏策划作品集。15 页，约 1.78 MB，包含日晷游戏、Playwright MCP 数据分析、多 agent 验证、独立撰写的《遗迹回响》3D RPG 成长系统策划案与女性向游戏拆解，以及个人游戏经历可视化。
 
 ## 游戏策划作品
 
